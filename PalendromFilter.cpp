@@ -60,10 +60,15 @@ void enter(const vector <string>& vec) {
 	}
 }
 
+string ReadQuery() {
+	string hallo;
+	getline(cin, hallo);
+	return hallo;
+}
+
 int main() {
-	string text;
+	const string text = ReadQuery();
 	vector <string> many_words;
-	getline(cin, text);
 	many_words = SplitInToWords(text);
 	many_words = PalFilter(many_words, 4);
 	cout << UnicPalindrome(many_words);
