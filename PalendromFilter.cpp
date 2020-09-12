@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int UnicPalindrome(vector <string> jp) {
+int UnicPalindrome(const vector <string>& jp) {
 	set <string> PO;
 	for (auto p : jp) {
 		PO.insert(p);
@@ -13,7 +13,7 @@ int UnicPalindrome(vector <string> jp) {
 	return PO.size();
 }
 
-bool IsPalindrome(string word) {
+bool IsPalindrome(const string& word) {
 	string temp = word;
 	for (int i = 0; i < word.size(); i++) {
 		temp[word.size() - i - 1] = word[i];
@@ -26,7 +26,7 @@ bool IsPalindrome(string word) {
 	}
 }
 
-vector <string> SplitInToWords(string text) {
+vector <string> SplitInToWords(const string& text) {
 	vector <string> words;
 	string word;
 	for (int i = 0; i < text.size(); i++) {
@@ -42,7 +42,7 @@ vector <string> SplitInToWords(string text) {
 	return words;
 }
 
-vector <string> PalFilter(vector <string> words, int min_len) {
+vector <string> PalFilter(const vector <string>& words, const int min_len) {
 	vector <string> res;
 	for (auto p : words) {
 		if (p.size() >= min_len) {
@@ -54,7 +54,7 @@ vector <string> PalFilter(vector <string> words, int min_len) {
 	return res;
 }
 
-void enter(vector <string> vec) {
+void enter(const vector <string>& vec) {
 	for (auto p : vec) {
 		cout << p << endl;
 	}
